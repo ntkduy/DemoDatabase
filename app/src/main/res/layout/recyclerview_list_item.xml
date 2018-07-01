@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:id="@+id/btn_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sale_button_height"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btn_sale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="8dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/product_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sale"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="8dp">
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/standard_margin_padding"
+            android:paddingStart="@dimen/standard_margin_padding"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="PRODUCT NAME"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="@dimen/small_margin_padding" />
+
+        <TextView
+            android:id="@+id/tv_price_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/price_section_height"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:paddingEnd="@dimen/standard_margin_padding"
+            android:paddingStart="@dimen/standard_margin_padding"
+            android:text="@string/tv_price_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+            android:layout_marginLeft="@dimen/small_margin_padding" />
+
+
+        <TextView
+            android:id="@+id/tv_price_value"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_section_height"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:paddingEnd="@dimen/standard_margin_padding"
+            android:paddingStart="@dimen/standard_margin_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_price_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+            tools:text="$32.5"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="@dimen/small_margin_padding" />
+
+        <TextView
+            android:id="@+id/tv_quantity_label"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/quantity_section_height"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:paddingEnd="@dimen/standard_margin_padding"
+            android:paddingStart="@dimen/standard_margin_padding"
+            android:text="@string/tv_quantity_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price_label"
+            android:layout_marginLeft="@dimen/small_margin_padding" />
+
+        <TextView
+            android:id="@+id/tv_quantity_value"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quantity_section_height"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingEnd="@dimen/standard_margin_padding"
+            android:paddingStart="@dimen/standard_margin_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price_value"
+            tools:text="13" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
